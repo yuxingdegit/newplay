@@ -34,9 +34,10 @@ export class control extends Component {
     private _speed: number = 0.1;
     private _actMode = constant.actMode.STAND;
     private _actcombo = 0;
+    private _playing = false;
 
     start() {
-        decastis.on(constant.eventName.GAME_START, this._reset);
+        decastis.on(constant.eventName.GAME_START, this._reset, this);
     }
 
     onDestroy() {
@@ -44,12 +45,13 @@ export class control extends Component {
         this._touchID = null;
     }
 
-    _reset() {
+    private _reset() {
         this._addEvent();
         this._pressed = false;
         this._touchID = -1;
         this._dir = cc.v2(0, 0);
         this._angle = 180;
+        this._playing = true;
     }
 
     private _addEvent() {
@@ -175,7 +177,7 @@ export class control extends Component {
                 this.role.getComponent(SkeletalAnimationComponent).play('Skelet|Martelo2');
                 this.scheduleOnce(this.roleStand, 0.7);
                 audioManager.playEffect('box1')
-                
+
             }
             else {
                 this.role.getComponent(SkeletalAnimationComponent).stop()
@@ -197,7 +199,10 @@ export class control extends Component {
     }
 
     update(dt: number) {
-        // this._move(dt);
+        if (this._playing) {
+            this._move(dt);
+        }
+
     }
 
     private _move(dt: number) {
