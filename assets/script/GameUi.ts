@@ -17,6 +17,11 @@ export class GameUi extends Component {
         type: Node
     })
     btnAction: Node = null;
+
+    @property({
+        type: Node
+    })
+    pairing: Node = null;
     start () {
         this.btnStart.on(cc.SystemEventType.TOUCH_END,this.gameStart,this);
         this.btnStore.on(cc.SystemEventType.TOUCH_END,this.goStore,this);
@@ -25,6 +30,11 @@ export class GameUi extends Component {
     // 开始按钮
     public gameStart(){
         console.log('start event')
+        this.startPairing()
+    }
+    public startPairing(){
+        // console.log(this)
+        this.pairing.active=true;
     }
     // 商店按钮
     public goStore(){

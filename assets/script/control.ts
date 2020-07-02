@@ -1,6 +1,7 @@
 import { _decorator, Component, Node, Vec2, systemEvent, SystemEventType, EventTouch, Touch, Vec3, UITransformComponent, SkeletalAnimationComponent } from 'cc';
 import { constant } from './constant';
 import { decastis } from './decastis';
+import { audioManager } from './audioManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('control')
@@ -173,11 +174,14 @@ export class control extends Component {
                 this.role.getComponent(SkeletalAnimationComponent).stop()
                 this.role.getComponent(SkeletalAnimationComponent).play('Skelet|Martelo2');
                 this.scheduleOnce(this.roleStand, 0.7);
+                audioManager.playEffect('box1')
+                
             }
             else {
                 this.role.getComponent(SkeletalAnimationComponent).stop()
                 this.role.getComponent(SkeletalAnimationComponent).play('Skelet|Boxing');
                 this.scheduleOnce(this.roleStand, 0.6);
+                audioManager.playEffect('box2')
             }
 
         }
@@ -193,7 +197,7 @@ export class control extends Component {
     }
 
     update(dt: number) {
-        this._move(dt);
+        // this._move(dt);
     }
 
     private _move(dt: number) {
