@@ -1,6 +1,7 @@
 import { _decorator, Component, Node, Vec2, systemEvent, SystemEventType, EventTouch, Touch, Vec3, UITransformComponent, SkeletalAnimationComponent } from 'cc';
 import { constant } from './constant';
 import { decastis } from './decastis';
+import { audioManager } from './audioManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('control')
