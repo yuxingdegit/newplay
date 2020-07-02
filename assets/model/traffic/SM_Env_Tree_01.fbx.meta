@@ -38,12 +38,12 @@
         "gltfIndex": 0
       }
     },
-    "43c71": {
+    "6c241": {
       "importer": "gltf-embeded-image",
-      "uuid": "bd2fb855-31bd-437c-a2d9-69b40aad1377@43c71",
+      "uuid": "bd2fb855-31bd-437c-a2d9-69b40aad1377@6c241",
       "displayName": "",
-      "id": "43c71",
-      "name": "file1.image",
+      "id": "6c241",
+      "name": "PolygonCity_Texture.png.image",
       "ver": "1.0.2",
       "imported": true,
       "files": [
@@ -75,8 +75,8 @@
         "mipfilter": "none",
         "premultiplyAlpha": false,
         "anisotropy": 1,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/model/traffic/PolygonCity_Texture.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "bd2fb855-31bd-437c-a2d9-69b40aad1377@6c241"
       }
     },
     "8d883": {
@@ -99,9 +99,8 @@
   "userData": {
     "imageMetas": [
       {
-        "name": "file1",
-        "remap": "db://assets/model/traffic/PolygonCity_Texture.png",
-        "uri": "bd2fb855-31bd-437c-a2d9-69b40aad1377@43c71"
+        "name": "PolygonCity_Texture.png",
+        "uri": "bd2fb855-31bd-437c-a2d9-69b40aad1377@6c241"
       }
     ],
     "redirect": "bd2fb855-31bd-437c-a2d9-69b40aad1377@55710",
