@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "69ef32e8-700f-4e5e-93c2-8c5878032354",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "69ef32e8-700f-4e5e-93c2-8c5878032354@6c48a",
+      "displayName": "lp_houses",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "69ef32e8-700f-4e5e-93c2-8c5878032354"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "69ef32e8-700f-4e5e-93c2-8c5878032354@6c48a"
+  }
+}

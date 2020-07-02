@@ -1,0 +1,339 @@
+{
+  "ver": "1.3.19",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "cc808a0f-c282-473b-9917-391ce1180b06",
+  "files": [],
+  "subMetas": {
+    "75054": {
+      "importer": "gltf-embeded-image",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@75054",
+      "displayName": "",
+      "id": "75054",
+      "name": "lp_houses.png.image",
+      "ver": "1.0.2",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "94558": {
+      "importer": "gltf-mesh",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@94558",
+      "displayName": "",
+      "id": "94558",
+      "name": "Window_4.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 12
+      }
+    },
+    "f478a": {
+      "importer": "gltf-mesh",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@f478a",
+      "displayName": "",
+      "id": "f478a",
+      "name": "polySurface968.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "867df": {
+      "importer": "gltf-mesh",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@867df",
+      "displayName": "",
+      "id": "867df",
+      "name": "polySurface977.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 1
+      }
+    },
+    "b203b": {
+      "importer": "gltf-mesh",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@b203b",
+      "displayName": "",
+      "id": "b203b",
+      "name": "Latern.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 2
+      }
+    },
+    "4021a": {
+      "importer": "gltf-mesh",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@4021a",
+      "displayName": "",
+      "id": "4021a",
+      "name": "Roof.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 3
+      }
+    },
+    "b3ae2": {
+      "importer": "gltf-mesh",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@b3ae2",
+      "displayName": "",
+      "id": "b3ae2",
+      "name": "polySurface999.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 4
+      }
+    },
+    "b78d7": {
+      "importer": "gltf-mesh",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@b78d7",
+      "displayName": "",
+      "id": "b78d7",
+      "name": "Stairs.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 5
+      }
+    },
+    "18cc7": {
+      "importer": "gltf-mesh",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@18cc7",
+      "displayName": "",
+      "id": "18cc7",
+      "name": "Door.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 6
+      }
+    },
+    "33db2": {
+      "importer": "gltf-mesh",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@33db2",
+      "displayName": "",
+      "id": "33db2",
+      "name": "Porch.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 7
+      }
+    },
+    "9fa0c": {
+      "importer": "gltf-mesh",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@9fa0c",
+      "displayName": "",
+      "id": "9fa0c",
+      "name": "Platform.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 8
+      }
+    },
+    "1c0d9": {
+      "importer": "gltf-mesh",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@1c0d9",
+      "displayName": "",
+      "id": "1c0d9",
+      "name": "Window_3.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 9
+      }
+    },
+    "2e335": {
+      "importer": "gltf-mesh",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@2e335",
+      "displayName": "",
+      "id": "2e335",
+      "name": "Window_1.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 10
+      }
+    },
+    "63f81": {
+      "importer": "gltf-mesh",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@63f81",
+      "displayName": "",
+      "id": "63f81",
+      "name": "Window_2.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 11
+      }
+    },
+    "d20e9": {
+      "importer": "texture",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@d20e9",
+      "displayName": "",
+      "id": "d20e9",
+      "name": "file1.texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "cc808a0f-c282-473b-9917-391ce1180b06@75054"
+      }
+    },
+    "1361a": {
+      "importer": "gltf-material",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@1361a",
+      "displayName": "",
+      "id": "1361a",
+      "name": "lp_houses.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "a8e6c": {
+      "importer": "gltf-scene",
+      "uuid": "cc808a0f-c282-473b-9917-391ce1180b06@a8e6c",
+      "displayName": "",
+      "id": "a8e6c",
+      "name": "house_20.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "lp_houses.png",
+        "uri": "cc808a0f-c282-473b-9917-391ce1180b06@75054"
+      }
+    ],
+    "redirect": "cc808a0f-c282-473b-9917-391ce1180b06@a8e6c",
+    "assetFinder": {
+      "meshes": [
+        "cc808a0f-c282-473b-9917-391ce1180b06@f478a",
+        "cc808a0f-c282-473b-9917-391ce1180b06@867df",
+        "cc808a0f-c282-473b-9917-391ce1180b06@b203b",
+        "cc808a0f-c282-473b-9917-391ce1180b06@4021a",
+        "cc808a0f-c282-473b-9917-391ce1180b06@b3ae2",
+        "cc808a0f-c282-473b-9917-391ce1180b06@b78d7",
+        "cc808a0f-c282-473b-9917-391ce1180b06@18cc7",
+        "cc808a0f-c282-473b-9917-391ce1180b06@33db2",
+        "cc808a0f-c282-473b-9917-391ce1180b06@9fa0c",
+        "cc808a0f-c282-473b-9917-391ce1180b06@1c0d9",
+        "cc808a0f-c282-473b-9917-391ce1180b06@2e335",
+        "cc808a0f-c282-473b-9917-391ce1180b06@63f81",
+        "cc808a0f-c282-473b-9917-391ce1180b06@94558"
+      ],
+      "skeletons": [],
+      "textures": [
+        "cc808a0f-c282-473b-9917-391ce1180b06@d20e9"
+      ],
+      "materials": [
+        "cc808a0f-c282-473b-9917-391ce1180b06@1361a"
+      ],
+      "scenes": [
+        "cc808a0f-c282-473b-9917-391ce1180b06@a8e6c"
+      ]
+    }
+  }
+}

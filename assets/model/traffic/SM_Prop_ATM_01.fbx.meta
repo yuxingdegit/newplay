@@ -1,0 +1,124 @@
+{
+  "ver": "1.3.19",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "2c9a4e36-ba73-41ee-beb2-ba133f602c3f",
+  "files": [],
+  "subMetas": {
+    "6817b": {
+      "importer": "gltf-mesh",
+      "uuid": "2c9a4e36-ba73-41ee-beb2-ba133f602c3f@6817b",
+      "displayName": "",
+      "id": "6817b",
+      "name": "SM_Prop_ATM_01.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "43c71": {
+      "importer": "gltf-embeded-image",
+      "uuid": "2c9a4e36-ba73-41ee-beb2-ba133f602c3f@43c71",
+      "displayName": "",
+      "id": "43c71",
+      "name": "file1.image",
+      "ver": "1.0.2",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "d20e9": {
+      "importer": "texture",
+      "uuid": "2c9a4e36-ba73-41ee-beb2-ba133f602c3f@d20e9",
+      "displayName": "",
+      "id": "d20e9",
+      "name": "file1.texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/model/traffic/PolygonCity_Texture.png"
+      }
+    },
+    "8d883": {
+      "importer": "gltf-material",
+      "uuid": "2c9a4e36-ba73-41ee-beb2-ba133f602c3f@8d883",
+      "displayName": "",
+      "id": "8d883",
+      "name": "lambert1.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "7127c": {
+      "importer": "gltf-scene",
+      "uuid": "2c9a4e36-ba73-41ee-beb2-ba133f602c3f@7127c",
+      "displayName": "",
+      "id": "7127c",
+      "name": "SM_Prop_ATM_01.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "file1",
+        "remap": "db://assets/model/traffic/PolygonCity_Texture.png",
+        "uri": "2c9a4e36-ba73-41ee-beb2-ba133f602c3f@43c71"
+      }
+    ],
+    "redirect": "2c9a4e36-ba73-41ee-beb2-ba133f602c3f@7127c",
+    "assetFinder": {
+      "meshes": [
+        "2c9a4e36-ba73-41ee-beb2-ba133f602c3f@6817b"
+      ],
+      "skeletons": [],
+      "textures": [
+        "2c9a4e36-ba73-41ee-beb2-ba133f602c3f@d20e9"
+      ],
+      "materials": [
+        "2c9a4e36-ba73-41ee-beb2-ba133f602c3f@8d883"
+      ],
+      "scenes": [
+        "2c9a4e36-ba73-41ee-beb2-ba133f602c3f@7127c"
+      ]
+    }
+  }
+}
