@@ -44,7 +44,8 @@ enum CAR_GROUP {
 enum ACT_MODE {
     STAND = 0,
     RUN = 1,
-    ATTACK = 2
+    ATTACK = 2,
+    SKILL = 3,
 }
 
 @ccclass('constant')

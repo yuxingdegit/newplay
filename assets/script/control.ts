@@ -168,7 +168,7 @@ export class control extends Component {
     }
 
     public roleAttack() {
-        if (this._actMode !== constant.actMode.ATTACK) {
+        if (this._actMode !== constant.actMode.ATTACK && this._actMode !== constant.actMode.SKILL) {
             this._actcombo++;
             this._actMode = constant.actMode.ATTACK;
             if (this._actcombo == 3) {
@@ -189,6 +189,15 @@ export class control extends Component {
         }
         else {
             console.log('cding')
+        }
+    }
+
+    public roleSkill() {
+        if (this._actMode !== constant.actMode.ATTACK && this._actMode !== constant.actMode.SKILL) {
+            this._actMode = constant.actMode.SKILL;
+            this.role.getComponent(SkeletalAnimationComponent).stop()
+            this.role.getComponent(SkeletalAnimationComponent).play('Skelet|Hurricane Kick');
+            this.scheduleOnce(this.roleStand, 1.5);
         }
     }
 
