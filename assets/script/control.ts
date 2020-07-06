@@ -31,7 +31,6 @@ export class control extends Component {
         type: Node
     })
     camera: Node = null;
-    testEnemy=null;
     private _touchID: number;
     private _dir: Vec2;
     private _angle: number;
@@ -45,16 +44,12 @@ export class control extends Component {
     private _enemyrotatespeed = 0.1;
     private _actModeE = constant.actMode.STAND;
 
+
+
     start() {
         decastis.on(constant.eventName.GAME_START, this._reset, this);
-        this.testEnemy=this.node.parent.getChildByName('stage').getChildByName('enemy').getComponent('enemy');
-        // this.testEnemy.byAttack()
-        this.testEnemy.byAttack.bind(this.testEnemy)
-        // this.scheduleOnce(()=>{
-        //     this.testEnemy.byAttack()
-        // }, 1.5);
-        // console.log(this.testEnemy,99)
-
+        
+        this.enemy['bloodNum']=1 
         
     }
 
@@ -232,15 +227,20 @@ export class control extends Component {
         this.role.getComponent(SkeletalAnimationComponent).stop()
         this.role.getComponent(SkeletalAnimationComponent).play('Skelet|Idel');
     }
-
+    
     private _checkAttack() {
         var dis = this._getDis(this.enemy, this.role);
         if (dis.length() < 2) {
+            // 敌人被打
             if (this._actModeE !== constant.actMode.BE) {
                 this._actModeE = constant.actMode.BE;
                 this.enemy.getComponent(SkeletalAnimationComponent).stop()
                 this.enemy.getComponent(SkeletalAnimationComponent).play('Skelet|Center Block');
                 this.scheduleOnce(this.enemyStand, 0.7);
+
+                if(this.enemy['bloodNum']>=0.05){
+                    this.enemy['bloodNum']-=0.05;
+                }
             }
         }
     }

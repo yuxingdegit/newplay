@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, System, director, Director, setDisplayStats } from 'cc';
+import { _decorator, Component, Node, System, director, Director, setDisplayStats, CameraComponent } from 'cc';
 import { decastis } from './decastis';
 import { constant } from './constant';
 const { ccclass, property } = _decorator;
@@ -24,11 +24,15 @@ export class GameUi extends Component {
         type: Node
     })
     pairing: Node = null;
+
     start() {
         setDisplayStats(false);
         this.btnStart.on(cc.SystemEventType.TOUCH_END, this.gameStart, this);
         this.btnStore.on(cc.SystemEventType.TOUCH_END, this.goStore, this);
         this.btnAction.on(cc.SystemEventType.TOUCH_END, this.goAction, this);
+
+      
+
     }
     // 开始按钮
     public gameStart() {
@@ -49,7 +53,11 @@ export class GameUi extends Component {
     public goAction() {
         console.log('goaction event')
     }
-    // update (deltaTime: number) {
-    //     // Your update function goes here.
-    // }
+    update (deltaTime: number) {
+        
+
+        
+        
+    }
+   
 }
