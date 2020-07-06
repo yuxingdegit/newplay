@@ -26,7 +26,7 @@ export class control extends Component {
         type: Node
     })
     camera: Node = null;
-
+    testEnemy=null;
     private _touchID: number;
     private _dir: Vec2;
     private _angle: number;
@@ -38,6 +38,15 @@ export class control extends Component {
 
     start() {
         decastis.on(constant.eventName.GAME_START, this._reset, this);
+        this.testEnemy=this.node.parent.getChildByName('stage').getChildByName('enemy').getComponent('enemy');
+        // this.testEnemy.byAttack()
+        this.testEnemy.byAttack.bind(this.testEnemy)
+        // this.scheduleOnce(()=>{
+        //     this.testEnemy.byAttack()
+        // }, 1.5);
+        // console.log(this.testEnemy,99)
+
+        
     }
 
     onDestroy() {

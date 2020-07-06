@@ -1,0 +1,73 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "78c5b7a0-aaf9-4900-96b3-a18d12b9f01c",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "78c5b7a0-aaf9-4900-96b3-a18d12b9f01c@6c48a",
+      "displayName": "blood",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "78c5b7a0-aaf9-4900-96b3-a18d12b9f01c"
+      }
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "78c5b7a0-aaf9-4900-96b3-a18d12b9f01c@f9941",
+      "displayName": "blood",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "ver": "1.0.8",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0.5,
+        "offsetY": 0.5,
+        "trimX": 3,
+        "trimY": 3,
+        "width": 191,
+        "height": 38,
+        "rawWidth": 196,
+        "rawHeight": 45,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "78c5b7a0-aaf9-4900-96b3-a18d12b9f01c@6c48a",
+        "atlasUuid": ""
+      }
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "redirect": "78c5b7a0-aaf9-4900-96b3-a18d12b9f01c@f9941"
+  }
+}
