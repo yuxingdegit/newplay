@@ -1,4 +1,4 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Node, System, director, Director, setDisplayStats } from 'cc';
 import { decastis } from './decastis';
 import { constant } from './constant';
 const { ccclass, property } = _decorator;
@@ -25,6 +25,7 @@ export class GameUi extends Component {
     })
     pairing: Node = null;
     start() {
+        setDisplayStats(false);
         this.btnStart.on(cc.SystemEventType.TOUCH_END, this.gameStart, this);
         this.btnStore.on(cc.SystemEventType.TOUCH_END, this.goStore, this);
         this.btnAction.on(cc.SystemEventType.TOUCH_END, this.goAction, this);
@@ -36,9 +37,9 @@ export class GameUi extends Component {
     }
     public startPairing() {
         // console.log(this)
-        //this.pairing.active=true;
-        this.node.active = false;
-        decastis.dispatch(constant.eventName.GAME_START);
+        this.pairing.active = true;
+        //this.node.active = false;
+
     }
     // 商店按钮
     public goStore() {

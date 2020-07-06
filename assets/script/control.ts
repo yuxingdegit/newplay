@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Vec2, systemEvent, SystemEventType, EventTouch, Touch, Vec3, UITransformComponent, SkeletalAnimationComponent } from 'cc';
+import { _decorator, Component, Node, Vec2, systemEvent, SystemEventType, EventTouch, Touch, Vec3, UITransformComponent, SkeletalAnimationComponent, tween } from 'cc';
 import { constant } from './constant';
 import { decastis } from './decastis';
 import { audioManager } from './audioManager';
@@ -25,6 +25,11 @@ export class control extends Component {
     @property({
         type: Node
     })
+    enemy: Node = null;
+
+    @property({
+        type: Node
+    })
     camera: Node = null;
     testEnemy=null;
     private _touchID: number;
@@ -35,6 +40,10 @@ export class control extends Component {
     private _actMode = constant.actMode.STAND;
     private _actcombo = 0;
     private _playing = false;
+
+    private _rotorole = false;
+    private _enemyrotatespeed = 0.1;
+    private _actModeE = constant.actMode.STAND;
 
     start() {
         decastis.on(constant.eventName.GAME_START, this._reset, this);
@@ -186,6 +195,7 @@ export class control extends Component {
                 this.role.getComponent(SkeletalAnimationComponent).play('Skelet|Martelo2');
                 this.scheduleOnce(this.roleStand, 0.7);
                 audioManager.playEffect('box1')
+                this._checkAttack();
 
             }
             else {
@@ -193,6 +203,7 @@ export class control extends Component {
                 this.role.getComponent(SkeletalAnimationComponent).play('Skelet|Boxing');
                 this.scheduleOnce(this.roleStand, 0.6);
                 audioManager.playEffect('box2')
+                this._checkAttack();
             }
 
         }
@@ -206,8 +217,14 @@ export class control extends Component {
             this._actMode = constant.actMode.SKILL;
             this.role.getComponent(SkeletalAnimationComponent).stop()
             this.role.getComponent(SkeletalAnimationComponent).play('Skelet|Hurricane Kick');
-            this.scheduleOnce(this.roleStand, 1.5);
+            this.scheduleOnce(this.roleStand, 0.88);
         }
+    }
+
+    public enemyStand() {
+        this._actModeE = constant.actMode.STAND;
+        this.enemy.getComponent(SkeletalAnimationComponent).stop()
+        this.enemy.getComponent(SkeletalAnimationComponent).play('Skelet|Idel');
     }
 
     public roleStand() {
@@ -216,11 +233,81 @@ export class control extends Component {
         this.role.getComponent(SkeletalAnimationComponent).play('Skelet|Idel');
     }
 
+    private _checkAttack() {
+        var dis = this._getDis(this.enemy, this.role);
+        if (dis.length() < 2) {
+            if (this._actModeE !== constant.actMode.BE) {
+                this._actModeE = constant.actMode.BE;
+                this.enemy.getComponent(SkeletalAnimationComponent).stop()
+                this.enemy.getComponent(SkeletalAnimationComponent).play('Skelet|Center Block');
+                this.scheduleOnce(this.enemyStand, 0.7);
+            }
+        }
+    }
+
     update(dt: number) {
         if (this._playing) {
             this._move(dt);
         }
 
+        if (this._rotorole) {
+            var ang = this.getAngle(this.role.position.x, this.role.position.z, this.enemy.position.x, this.enemy.position.z);
+            console.log('ang=' + ang);
+            var neo = 0;
+            if (ang > 180) {
+                neo = 180 + (360 - ang);
+            }
+            else {
+                neo = 180 - ang;
+            }
+            this.enemy.setRotationFromEuler(0, neo, 0);
+
+
+            var result = this._getDis(this.enemy, this.role);
+            if (result.length() == 0) {
+                return;
+            }
+            else if (result.length() < 1.5) {
+                if (this._actModeE === constant.actMode.RUN) {
+                    this._actModeE = constant.actMode.STAND;
+                    this.enemy.getComponent(SkeletalAnimationComponent).stop()
+                    this.enemy.getComponent(SkeletalAnimationComponent).play('Skelet|Idel');
+                }
+            }
+            else {
+                if (this._actModeE === constant.actMode.STAND) {
+                    this._actModeE = constant.actMode.RUN;
+                    this.enemy.getComponent(SkeletalAnimationComponent).stop()
+                    this.enemy.getComponent(SkeletalAnimationComponent).play('Skelet|StandardRun');
+                }
+                var xx = result.x / result.length();
+                var zz = result.z / result.length();
+                var vx = xx * 1;
+                var vz = zz * 1;
+                var sx = vx * dt;
+                var sz = vz * dt;
+                let pos = this.enemy.getPosition();
+                pos.x = pos.x + sx;
+                pos.z = pos.z + sz;
+                pos.y = 0;
+                this.enemy.setPosition(pos);
+            }
+        }
+    }
+
+    public enemyAct0() {
+        this._rotorole = true;
+        // var ang = this.getAngle(this.role.position.x, this.role.position.z, this.enemy.position.x, this.enemy.position.z);
+        // var lastang = ang + 180;
+        // this.enemy.setRotationFromEuler(0, lastang, 0);
+        //tween(this.enemy.position).to(3, new Vec3(10, 0, 0)).start();
+
+        // tween(this._pos)
+        // .to(3, new Vec3(10, 10, 10), { easing: 'bounceInOut' })
+        // .to(3, new Vec3(0, 0, 0), { easing: 'elasticOut' })
+        // .union()
+        // .repeat(2) // 执行 2 次
+        // .start();
     }
 
     private _move(dt: number) {
@@ -237,5 +324,12 @@ export class control extends Component {
         this.role.setRotationFromEuler(0, this._angle, 0);
         this.camera.setPosition(pos.x, pos.y + 10, pos.z + 10);
         //console.log('dir22=' + dt);
+    }
+
+    private _getDis(a, b) {
+        var p1 = new Vec3(a.position.x, a.position.y, a.position.z);
+        var p2 = new Vec3(b.position.x, b.position.y, b.position.z);
+        var result = p2.subtract(p1);
+        return result;
     }
 }
