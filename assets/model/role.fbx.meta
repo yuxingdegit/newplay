@@ -85,14 +85,15 @@
       ],
       "subMetas": {},
       "userData": {
+        "events": [],
         "gltfIndex": 1,
-        "wrapMode": 2,
         "sample": 30,
         "span": {
           "from": 0,
           "to": 1.75
         },
-        "events": []
+        "speed": 2,
+        "wrapMode": 2
       }
     },
     "b14e6": {
