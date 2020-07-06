@@ -1,4 +1,6 @@
 import { _decorator, Component, Node,LabelComponent} from 'cc';
+import { decastis } from './decastis';
+import { constant } from './constant';
 const { ccclass, property } = _decorator;
 
 @ccclass('pairing')
@@ -47,6 +49,7 @@ export class pairing extends Component {
                 
                 this.node.active=false;
                 this.node.parent.active=false;
+                decastis.dispatch(constant.eventName.GAME_START);
             },1)
             
         }
