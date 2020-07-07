@@ -1,5 +1,5 @@
 {
-  "ver": "1.3.21",
+  "ver": "1.3.19",
   "importer": "fbx",
   "imported": true,
   "uuid": "31623bf3-8561-41d7-a840-b7727d67f92b",
@@ -28,7 +28,7 @@
       "displayName": "",
       "id": "94558",
       "name": "Window_4.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -45,7 +45,7 @@
       "displayName": "",
       "id": "db381",
       "name": "Latern2.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -62,7 +62,7 @@
       "displayName": "",
       "id": "08722",
       "name": "polySurface2074.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -79,7 +79,7 @@
       "displayName": "",
       "id": "a3d0c",
       "name": "Latern1.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -96,7 +96,7 @@
       "displayName": "",
       "id": "1071b",
       "name": "polySurface2147.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -113,7 +113,7 @@
       "displayName": "",
       "id": "b203b",
       "name": "Latern.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -130,7 +130,7 @@
       "displayName": "",
       "id": "ed94e",
       "name": "polySurface2149.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -147,7 +147,7 @@
       "displayName": "",
       "id": "e7319",
       "name": "Latern3.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -164,7 +164,7 @@
       "displayName": "",
       "id": "b0bb8",
       "name": "polySurface2151.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -181,7 +181,7 @@
       "displayName": "",
       "id": "6bf3c",
       "name": "Fence.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -198,7 +198,7 @@
       "displayName": "",
       "id": "63f81",
       "name": "Window_2.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -215,7 +215,7 @@
       "displayName": "",
       "id": "1c0d9",
       "name": "Window_3.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -232,7 +232,7 @@
       "displayName": "",
       "id": "2e335",
       "name": "Window_1.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -249,7 +249,7 @@
       "displayName": "",
       "id": "c7bec",
       "name": "Window_5.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -266,7 +266,7 @@
       "displayName": "",
       "id": "475c1",
       "name": "Window_6.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -283,7 +283,7 @@
       "displayName": "",
       "id": "d7f9b",
       "name": "Pipe.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -300,7 +300,7 @@
       "displayName": "",
       "id": "4021a",
       "name": "Roof.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -317,7 +317,7 @@
       "displayName": "",
       "id": "18cc7",
       "name": "Door.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -334,7 +334,7 @@
       "displayName": "",
       "id": "72b23",
       "name": "House_41.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",

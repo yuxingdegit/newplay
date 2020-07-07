@@ -1,5 +1,5 @@
 {
-  "ver": "1.3.21",
+  "ver": "1.3.19",
   "importer": "fbx",
   "imported": true,
   "uuid": "111bed10-9b45-4a9c-a654-775b5021729f",
@@ -28,7 +28,7 @@
       "displayName": "",
       "id": "97575",
       "name": "Door_2.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -45,7 +45,7 @@
       "displayName": "",
       "id": "2e335",
       "name": "Window_1.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -62,7 +62,7 @@
       "displayName": "",
       "id": "48c2b",
       "name": "Platform_3.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -79,7 +79,7 @@
       "displayName": "",
       "id": "d7f9b",
       "name": "Pipe.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -96,7 +96,7 @@
       "displayName": "",
       "id": "1c0d9",
       "name": "Window_3.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -113,7 +113,7 @@
       "displayName": "",
       "id": "63f81",
       "name": "Window_2.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -130,7 +130,7 @@
       "displayName": "",
       "id": "da406",
       "name": "Roof_3.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -147,7 +147,7 @@
       "displayName": "",
       "id": "70fb6",
       "name": "House_3.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",

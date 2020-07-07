@@ -1,5 +1,5 @@
 {
-  "ver": "1.3.21",
+  "ver": "1.3.19",
   "importer": "fbx",
   "imported": true,
   "uuid": "6fd44146-6b21-4fdd-b269-d1ea4f0e417a",
@@ -28,7 +28,7 @@
       "displayName": "",
       "id": "b78d7",
       "name": "Stairs.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -45,7 +45,7 @@
       "displayName": "",
       "id": "4b6c1",
       "name": "polySurface1387.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -62,7 +62,7 @@
       "displayName": "",
       "id": "b203b",
       "name": "Latern.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -79,7 +79,7 @@
       "displayName": "",
       "id": "2bc1d",
       "name": "polySurface1424.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -96,7 +96,7 @@
       "displayName": "",
       "id": "dae80",
       "name": "Beams.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -113,7 +113,7 @@
       "displayName": "",
       "id": "4021a",
       "name": "Roof.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -130,7 +130,7 @@
       "displayName": "",
       "id": "28c5e",
       "name": "Large_window.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -147,7 +147,7 @@
       "displayName": "",
       "id": "f5226",
       "name": "Rails.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -164,7 +164,7 @@
       "displayName": "",
       "id": "9fa0c",
       "name": "Platform.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
