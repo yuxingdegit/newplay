@@ -1,5 +1,5 @@
 {
-  "ver": "1.3.19",
+  "ver": "1.3.21",
   "importer": "fbx",
   "imported": true,
   "uuid": "f845fdc8-9ea1-4a5c-9767-fa7f70054932",
@@ -11,7 +11,7 @@
       "displayName": "",
       "id": "71757",
       "name": "Latern_2.mesh",
-      "ver": "1.0.9",
+      "ver": "1.1.0",
       "imported": true,
       "files": [
         ".json",
@@ -45,7 +45,7 @@
       "displayName": "",
       "id": "4021a",
       "name": "Roof.mesh",
-      "ver": "1.0.9",
+      "ver": "1.1.0",
       "imported": true,
       "files": [
         ".json",
@@ -62,7 +62,7 @@
       "displayName": "",
       "id": "08776",
       "name": "House_24.mesh",
-      "ver": "1.0.9",
+      "ver": "1.1.0",
       "imported": true,
       "files": [
         ".json",
@@ -79,7 +79,7 @@
       "displayName": "",
       "id": "dae80",
       "name": "Beams.mesh",
-      "ver": "1.0.9",
+      "ver": "1.1.0",
       "imported": true,
       "files": [
         ".json",
@@ -96,7 +96,7 @@
       "displayName": "",
       "id": "7ad9e",
       "name": "Doors.mesh",
-      "ver": "1.0.9",
+      "ver": "1.1.0",
       "imported": true,
       "files": [
         ".json",
@@ -113,7 +113,7 @@
       "displayName": "",
       "id": "b78d7",
       "name": "Stairs.mesh",
-      "ver": "1.0.9",
+      "ver": "1.1.0",
       "imported": true,
       "files": [
         ".json",
@@ -130,7 +130,7 @@
       "displayName": "",
       "id": "1de68",
       "name": "Latern_3.mesh",
-      "ver": "1.0.9",
+      "ver": "1.1.0",
       "imported": true,
       "files": [
         ".json",
@@ -147,7 +147,7 @@
       "displayName": "",
       "id": "e13d2",
       "name": "Latern_1.mesh",
-      "ver": "1.0.9",
+      "ver": "1.1.0",
       "imported": true,
       "files": [
         ".json",
@@ -164,7 +164,7 @@
       "displayName": "",
       "id": "1f039",
       "name": "Latern_4.mesh",
-      "ver": "1.0.9",
+      "ver": "1.1.0",
       "imported": true,
       "files": [
         ".json",
