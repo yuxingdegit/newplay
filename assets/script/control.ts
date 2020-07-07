@@ -190,7 +190,8 @@ export class control extends Component {
                 this.role.getComponent(SkeletalAnimationComponent).play('Skelet|Martelo2');
                 this.scheduleOnce(this.roleStand, 0.7);
                 audioManager.playEffect('box1')
-                this._checkAttack();
+                this.scheduleOnce(this._checkAttack,0.2)
+                // this._checkAttack();
 
             }
             else {
@@ -198,7 +199,8 @@ export class control extends Component {
                 this.role.getComponent(SkeletalAnimationComponent).play('Skelet|Boxing');
                 this.scheduleOnce(this.roleStand, 0.6);
                 audioManager.playEffect('box2')
-                this._checkAttack();
+                // this._checkAttack();
+                this.scheduleOnce(this._checkAttack,0.2)
             }
 
         }
@@ -234,17 +236,32 @@ export class control extends Component {
             // 敌人被打
             if (this._actModeE !== constant.actMode.BE) {
                 this._actModeE = constant.actMode.BE;
-                this.enemy.getComponent(SkeletalAnimationComponent).stop()
-                this.enemy.getComponent(SkeletalAnimationComponent).play('Skelet|Center Block');
-                this.scheduleOnce(this.enemyStand, 0.7);
+               
 
-                if(this.enemy['bloodNum']>=0.05){
-                    this.enemy['bloodNum']-=0.05;
+                if(this.enemy['bloodNum']>=0.1){
+                    this.enemy['bloodNum']-=0.1;
+                    this.enemy.getComponent(SkeletalAnimationComponent).stop()
+                    this.enemy.getComponent(SkeletalAnimationComponent).play('Skelet|Center Block');
+                    this.scheduleOnce(this.enemyStand, 0.7);
+                }else{
+                    let pos = this.enemy.getPosition();
+                    pos.z-=2;
+                    this.enemy.setPosition(pos)
+                    this.enemy['bloodNum']=0.0001;
+                    this.enemy.getComponent(SkeletalAnimationComponent).stop()
+                    this.enemy.getComponent(SkeletalAnimationComponent).play('Skelet|SweepFall');
+                    this.scheduleOnce(()=>{
+                        this.enemy.getComponent(SkeletalAnimationComponent).stop()
+                    }, 1.5);
                 }
             }
         }
     }
 
+    // 击飞敌人
+    private _blowEnemy(){
+        
+    }
     update(dt: number) {
         if (this._playing) {
             this._move(dt);
