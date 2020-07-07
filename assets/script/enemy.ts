@@ -21,11 +21,11 @@ export class enemy extends Component {
     private _actMode = constant.actMode.STAND;
     start () {
 
-        this.byAttack.bind(this)
-        // Your initialization goes here.
-        this.anima=this.node.getComponent(SkeletalAnimationComponent);
+        // this.byAttack.bind(this)
+        // // Your initialization goes here.
+        // this.anima=this.node.getComponent(SkeletalAnimationComponent);
 
-        this._reset()
+        // this._reset()
         
     }
     private _reset() {
@@ -36,10 +36,10 @@ export class enemy extends Component {
     // 被击
     byAttack(){
         console.log(this)
-        this._actMode=constant.actMode.BYATTACK;
-        this.node.lookAt(this.hero.getPosition());
-        this.anima.play('Skelet|Center Block');
-        this.scheduleOnce(this.stand, 1.5);
+        // this._actMode=constant.actMode.BYATTACK;
+        // this.node.lookAt(this.hero.getPosition());
+        // this.anima.play('Skelet|Center Block');
+        // this.scheduleOnce(this.stand, 1.5);
     }
     // 站立
     stand(){
@@ -52,16 +52,16 @@ export class enemy extends Component {
     // 受击
     update (dt: number) {
         // Your update function goes here.
-        let dir = this._dir;
-        var vx = dir.x * 2;
-        var vz = dir.y * 2;
-        var sx = vx * dt;
-        var sz = vz * dt;
-        let pos = this.node.getPosition();
-        pos.x = pos.x + sx;
-        pos.z = pos.z - sz;
-        pos.y = 0;
-        this.node.setPosition(pos);
-        this.node.setRotationFromEuler(0, this._angle, 0);
+        // let dir = this._dir;
+        // var vx = dir.x * 2;
+        // var vz = dir.y * 2;
+        // var sx = vx * dt;
+        // var sz = vz * dt;
+        // let pos = this.node.getPosition();
+        // pos.x = pos.x + sx;
+        // pos.z = pos.z - sz;
+        // pos.y = 0;
+        // this.node.setPosition(pos);
+        // this.node.setRotationFromEuler(0, this._angle, 0);
     }
 }

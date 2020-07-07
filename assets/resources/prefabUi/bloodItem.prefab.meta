@@ -1,8 +1,8 @@
 {
   "ver": "1.0.29",
-  "importer": "scene",
+  "importer": "prefab",
   "imported": true,
-  "uuid": "68724b0f-3b3b-4ec4-aa2d-f14bdd362e76",
+  "uuid": "892c0c89-8fe6-4c5c-b895-a2fb6956d37d",
   "files": [
     ".json"
   ],
