@@ -235,7 +235,7 @@
         "wrapMode": 2,
         "sample": 30,
         "span": {
-          "from": 0,
+          "from": 1.71,
           "to": 8.25
         },
         "events": []
@@ -259,7 +259,7 @@
         "wrapMode": 2,
         "sample": 30,
         "span": {
-          "from": 0,
+          "from": 1.01,
           "to": 2.5
         },
         "events": []
@@ -414,7 +414,7 @@
         "splits": [
           {
             "name": "Skelet|StandUp",
-            "from": 0,
+            "from": 1.71,
             "to": 8.25,
             "wrapMode": 2
           }
@@ -427,7 +427,7 @@
         "splits": [
           {
             "name": "Skelet|SweepFall",
-            "from": 0,
+            "from": 1.01,
             "to": 2.5,
             "wrapMode": 2
           }
