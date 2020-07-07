@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Vec2, systemEvent, SystemEventType, EventTouch, Touch, Vec3, UITransformComponent, SkeletalAnimationComponent, tween } from 'cc';
+import { _decorator, Component, Node, Vec2, systemEvent, SystemEventType, EventTouch, Touch, Vec3, UITransformComponent, SkeletalAnimationComponent, tween, RigidBodyComponent } from 'cc';
 import { constant } from './constant';
 import { decastis } from './decastis';
 import { audioManager } from './audioManager';
@@ -30,7 +30,20 @@ export class control extends Component {
     @property({
         type: Node
     })
+    npc: Node = null;
+
+    @property({
+        type: Node
+    })
     camera: Node = null;
+
+    @property({
+        type: [Node]
+    })
+    tree: Node[] = [];
+
+    private _treefalled: boolean[] = [];
+
     private _touchID: number;
     private _dir: Vec2;
     private _angle: number;
@@ -40,7 +53,7 @@ export class control extends Component {
     private _actcombo = 0;
     private _playing = false;
 
-    private _rotorole = false;
+    private _enemyaim = constant.enemyAim.NO;
     private _enemyrotatespeed = 0.1;
     private _actModeE = constant.actMode.STAND;
 
@@ -48,9 +61,12 @@ export class control extends Component {
 
     start() {
         decastis.on(constant.eventName.GAME_START, this._reset, this);
-        
-        this.enemy['bloodNum']=1 
-        
+
+        this.enemy['bloodNum'] = 1;
+        for (let i = 0; i < 4; i++) {
+            this._treefalled[i] = false;
+        }
+
     }
 
     onDestroy() {
@@ -190,8 +206,7 @@ export class control extends Component {
                 this.role.getComponent(SkeletalAnimationComponent).play('Skelet|Martelo2');
                 this.scheduleOnce(this.roleStand, 0.7);
                 audioManager.playEffect('box1')
-                this.scheduleOnce(this._checkAttack,0.2)
-                // this._checkAttack();
+                this._checkAttack();
 
             }
             else {
@@ -199,8 +214,7 @@ export class control extends Component {
                 this.role.getComponent(SkeletalAnimationComponent).play('Skelet|Boxing');
                 this.scheduleOnce(this.roleStand, 0.6);
                 audioManager.playEffect('box2')
-                // this._checkAttack();
-                this.scheduleOnce(this._checkAttack,0.2)
+                this._checkAttack();
             }
 
         }
@@ -229,91 +243,52 @@ export class control extends Component {
         this.role.getComponent(SkeletalAnimationComponent).stop()
         this.role.getComponent(SkeletalAnimationComponent).play('Skelet|Idel');
     }
-    
+
     private _checkAttack() {
         var dis = this._getDis(this.enemy, this.role);
         if (dis.length() < 2) {
             // 敌人被打
             if (this._actModeE !== constant.actMode.BE) {
                 this._actModeE = constant.actMode.BE;
-               
+                this.enemy.getComponent(SkeletalAnimationComponent).stop()
+                this.enemy.getComponent(SkeletalAnimationComponent).play('Skelet|Center Block');
+                this.scheduleOnce(this.enemyStand, 0.7);
 
-                if(this.enemy['bloodNum']>=0.1){
-                    this.enemy['bloodNum']-=0.1;
-                    this.enemy.getComponent(SkeletalAnimationComponent).stop()
-                    this.enemy.getComponent(SkeletalAnimationComponent).play('Skelet|Center Block');
-                    this.scheduleOnce(this.enemyStand, 0.7);
-                }else{
-                    let pos = this.enemy.getPosition();
-                    pos.z-=2;
-                    this.enemy.setPosition(pos)
-                    this.enemy['bloodNum']=0.0001;
-                    this.enemy.getComponent(SkeletalAnimationComponent).stop()
-                    this.enemy.getComponent(SkeletalAnimationComponent).play('Skelet|SweepFall');
-                    this.scheduleOnce(()=>{
-                        this.enemy.getComponent(SkeletalAnimationComponent).stop()
-                    }, 1.5);
+                if (this.enemy['bloodNum'] >= 0.05) {
+                    this.enemy['bloodNum'] -= 0.05;
                 }
             }
         }
+        for (let i = 0; i < 4; i++) {
+            var dis = this._getDis(this.tree[i], this.role);
+            if (dis.length() < 2 && !this._treefalled[i]) {
+                this._treefalled[i] = true;
+                const otherrigidbody = this.tree[i].getComponent(RigidBodyComponent);
+                otherrigidbody.useGravity = true;
+                otherrigidbody.applyForce(new Vec3(Math.random() * 1000 + 1000, 1000, Math.random() * 1000 + 1000), new Vec3(Math.random() * 1, Math.random() * 1, Math.random() * 1));
+                // this.tree[i]
+            }
+
+        }
     }
 
-    // 击飞敌人
-    private _blowEnemy(){
-        
-    }
     update(dt: number) {
         if (this._playing) {
             this._move(dt);
         }
 
-        if (this._rotorole) {
-            var ang = this.getAngle(this.role.position.x, this.role.position.z, this.enemy.position.x, this.enemy.position.z);
-            console.log('ang=' + ang);
-            var neo = 0;
-            if (ang > 180) {
-                neo = 180 + (360 - ang);
-            }
-            else {
-                neo = 180 - ang;
-            }
-            this.enemy.setRotationFromEuler(0, neo, 0);
-
-
-            var result = this._getDis(this.enemy, this.role);
-            if (result.length() == 0) {
-                return;
-            }
-            else if (result.length() < 1.5) {
-                if (this._actModeE === constant.actMode.RUN) {
-                    this._actModeE = constant.actMode.STAND;
-                    this.enemy.getComponent(SkeletalAnimationComponent).stop()
-                    this.enemy.getComponent(SkeletalAnimationComponent).play('Skelet|Idel');
-                }
-            }
-            else {
-                if (this._actModeE === constant.actMode.STAND) {
-                    this._actModeE = constant.actMode.RUN;
-                    this.enemy.getComponent(SkeletalAnimationComponent).stop()
-                    this.enemy.getComponent(SkeletalAnimationComponent).play('Skelet|StandardRun');
-                }
-                var xx = result.x / result.length();
-                var zz = result.z / result.length();
-                var vx = xx * 1;
-                var vz = zz * 1;
-                var sx = vx * dt;
-                var sz = vz * dt;
-                let pos = this.enemy.getPosition();
-                pos.x = pos.x + sx;
-                pos.z = pos.z + sz;
-                pos.y = 0;
-                this.enemy.setPosition(pos);
-            }
+        if (this._enemyaim === constant.enemyAim.ROLE) {
+            this._enemyAim(this.role, dt);
+        }
+        if (this._enemyaim === constant.enemyAim.NPC) {
+            this._enemyAim(this.npc, dt);
         }
     }
 
     public enemyAct0() {
-        this._rotorole = true;
+        this.enemyStand();
+        this._enemyaim = constant.enemyAim.NO;
+        this.scheduleOnce(this.enemyAct1, 3);
         // var ang = this.getAngle(this.role.position.x, this.role.position.z, this.enemy.position.x, this.enemy.position.z);
         // var lastang = ang + 180;
         // this.enemy.setRotationFromEuler(0, lastang, 0);
@@ -325,6 +300,17 @@ export class control extends Component {
         // .union()
         // .repeat(2) // 执行 2 次
         // .start();
+    }
+
+
+    public enemyAct1() {
+        this._enemyaim = constant.enemyAim.ROLE;
+        this.scheduleOnce(this.enemyAct2, 3);
+    }
+
+    public enemyAct2() {
+        this._enemyaim = constant.enemyAim.NPC;
+        this.scheduleOnce(this.enemyAct0, 3);
     }
 
     private _move(dt: number) {
@@ -348,5 +334,50 @@ export class control extends Component {
         var p2 = new Vec3(b.position.x, b.position.y, b.position.z);
         var result = p2.subtract(p1);
         return result;
+    }
+
+    private _enemyAim(aim: Node, dt: number) {
+        var ang = this.getAngle(aim.position.x, aim.position.z, this.enemy.position.x, this.enemy.position.z);
+        console.log('ang=' + ang);
+        var neo = 0;
+        if (ang > 180) {
+            neo = 180 + (360 - ang);
+        }
+        else {
+            neo = 180 - ang;
+        }
+        this.enemy.setRotationFromEuler(0, neo, 0);
+
+
+
+        var result = this._getDis(this.enemy, aim);
+        if (result.length() == 0) {
+            return;
+        }
+        else if (result.length() < 1.5) {
+            if (this._actModeE === constant.actMode.RUN) {
+                this._actModeE = constant.actMode.STAND;
+                this.enemy.getComponent(SkeletalAnimationComponent).stop()
+                this.enemy.getComponent(SkeletalAnimationComponent).play('Skelet|Idel');
+            }
+        }
+        else {
+            if (this._actModeE === constant.actMode.STAND) {
+                this._actModeE = constant.actMode.RUN;
+                this.enemy.getComponent(SkeletalAnimationComponent).stop()
+                this.enemy.getComponent(SkeletalAnimationComponent).play('Skelet|StandardRun');
+            }
+            var xx = result.x / result.length();
+            var zz = result.z / result.length();
+            var vx = xx * 1;
+            var vz = zz * 1;
+            var sx = vx * dt;
+            var sz = vz * dt;
+            let pos = this.enemy.getPosition();
+            pos.x = pos.x + sx;
+            pos.z = pos.z + sz;
+            pos.y = 0;
+            this.enemy.setPosition(pos);
+        }
     }
 }

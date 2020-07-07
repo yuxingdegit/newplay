@@ -51,6 +51,12 @@ enum ACT_MODE {
     LYING = 5
 }
 
+enum ENEMY_AIM {
+    NO = 0,
+    ROLE = 1,
+    NPC = 2,
+}
+
 @ccclass('constant')
 export class constant {
     public static eventName = EVENT_NAME;
@@ -58,6 +64,7 @@ export class constant {
     public static audioSource = AUDIO_SOURCE;
     public static carGroup = CAR_GROUP;
     public static actMode = ACT_MODE;
+    public static enemyAim = ENEMY_AIM;
     public static talkTable = ['gogogo', 'nonono'];
     public static ndUI = {
         mainUI: 'mainUI',
