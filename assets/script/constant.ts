@@ -47,6 +47,8 @@ enum ACT_MODE {
     ATTACK = 2,
     SKILL = 3,
     BE = 4,
+    // 倒地状态
+    LYING = 5
 }
 
 @ccclass('constant')
