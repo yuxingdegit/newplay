@@ -1,5 +1,5 @@
 {
-  "ver": "1.3.21",
+  "ver": "1.3.19",
   "importer": "fbx",
   "imported": true,
   "uuid": "2821d537-75ac-41d7-8e37-9e4e1571cc78",
@@ -28,7 +28,7 @@
       "displayName": "",
       "id": "97771",
       "name": "House_40-4.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -45,7 +45,7 @@
       "displayName": "",
       "id": "2e476",
       "name": "Pipe-0.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -62,7 +62,7 @@
       "displayName": "",
       "id": "5efe3",
       "name": "Stairs-1.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -79,7 +79,7 @@
       "displayName": "",
       "id": "4fbd7",
       "name": "Stairs1-2.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -96,7 +96,7 @@
       "displayName": "",
       "id": "7b40c",
       "name": "Latern-3.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -113,7 +113,7 @@
       "displayName": "",
       "id": "c19da",
       "name": "Roof-5.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -130,7 +130,7 @@
       "displayName": "",
       "id": "124b9",
       "name": "Window_1-6.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -147,7 +147,7 @@
       "displayName": "",
       "id": "e8079",
       "name": "Window_2-7.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -164,7 +164,7 @@
       "displayName": "",
       "id": "90def",
       "name": "Window_3-8.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -181,7 +181,7 @@
       "displayName": "",
       "id": "f185c",
       "name": "Door-9.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",
@@ -198,7 +198,7 @@
       "displayName": "",
       "id": "53f03",
       "name": "Latern-10.mesh",
-      "ver": "1.1.0",
+      "ver": "1.0.9",
       "imported": true,
       "files": [
         ".json",

@@ -8,12 +8,9 @@ export class blood extends Component {
     // 摄像机
     _came = null;
     start() {
-        // Your initialization goes here.
-
         this._came = this.node.parent.parent.getChildByName('Camera').getComponent(CameraComponent)
-
-
         const nd = this.node.parent.parent.getChildByName('stage');
+        // 查找所有角色，包括敌人和玩家，用于血条的跟踪
         for (var i in nd.children) {
             if (nd.children[i].name == 'enemy' || nd.children[i].name == 'role') {
                 this.roleList.push(nd.children[i])
@@ -39,7 +36,6 @@ export class blood extends Component {
                 const p = this._came.convertToUINode(pos, this.node);
                 p.y += 200;
                 p.x-=50;
-                
                 this.node.children[i].children[0].scale=new cc.Vec3(this.roleList[i].bloodNum||1,1,1)
                 this.node.children[i].position = p;
                 
