@@ -654,7 +654,7 @@
         "__id__": 153
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 195
@@ -6263,8 +6263,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 49.903,
-      "y": -479.625,
+      "x": 45.892,
+      "y": -370.517,
       "z": 0
     },
     "_lrot": {
@@ -6378,8 +6378,8 @@
     "_string": "攻击",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 20,
-    "_fontSize": 20,
+    "_actualFontSize": 40,
+    "_fontSize": 40,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 1,
@@ -6403,8 +6403,8 @@
     "_priority": 0,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 100,
-      "height": 40
+      "width": 108.023,
+      "height": 97.763
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -6548,8 +6548,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 49.903,
-      "y": -383.096,
+      "x": 282.559,
+      "y": -221.039,
       "z": 0
     },
     "_lrot": {
@@ -6833,8 +6833,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 242.81,
-      "y": -479.625,
+      "x": 145.736,
+      "y": -490.857,
       "z": 0
     },
     "_lrot": {
@@ -6948,8 +6948,8 @@
     "_string": "技能",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 20,
-    "_fontSize": 20,
+    "_actualFontSize": 40,
+    "_fontSize": 40,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 1,
@@ -6973,8 +6973,8 @@
     "_priority": 0,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 100,
-      "height": 40
+      "width": 114.441,
+      "height": 100.97200000000001
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",

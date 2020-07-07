@@ -256,11 +256,8 @@ export class control extends Component {
                     this.enemy.getComponent(SkeletalAnimationComponent).play('Skelet|Center Block');
                     
                     // 百分之20概率击飞敌人
-                    if(Math.random()<0.2){
-                        this._blowEnemy()
-                    }else{
-                        this.scheduleOnce(this.enemyStand, 0.7);
-                    }
+                    Math.random()<0.2?this._blowEnemy():this.scheduleOnce(this.enemyStand, 0.7);
+                  
                 } else {
                     // 血条为空
                     this.enemy['bloodNum'] = 0.0001;
